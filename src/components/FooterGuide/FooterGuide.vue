@@ -27,7 +27,7 @@
   export default {
       methods:{
           goPath(path){
-              this.$router.push(path)
+              path !== this.$route.path && this.$router.push(path)
           }
       }
   }
@@ -43,6 +43,7 @@
       height 98px
       border-top 1px solid #d9d9d9
       box-sizing border-box
+      background #fff
       .guideItem
         width 20%
         height 71px
